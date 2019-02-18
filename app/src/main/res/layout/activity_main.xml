@@ -1,71 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/main_et_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/number_0" />
+
     <Button
         android:id="@+id/main_btn_num_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|start"
+        android:layout_below="@+id/main_et_result"
         android:text="@string/number_7" />
 
     <Button
         android:id="@+id/main_btn_num_8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|center"
+        android:layout_alignTop="@+id/main_btn_num_7"
+        android:layout_toEndOf="@+id/main_btn_num_7"
         android:text="@string/number_8" />
 
     <Button
         android:id="@+id/main_btn_num_9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|end"
+        android:layout_alignTop="@+id/main_btn_num_7"
+        android:layout_toEndOf="@+id/main_btn_num_8"
         android:text="@string/number_9" />
 
     <Button
         android:id="@+id/main_btn_num_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|start"
+        android:layout_below="@+id/main_btn_num_7"
         android:text="@string/number_4" />
 
     <Button
         android:id="@+id/main_btn_num_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_alignTop="@+id/main_btn_num_4"
+        android:layout_toEndOf="@+id/main_btn_num_4"
         android:text="@string/number_5" />
 
     <Button
         android:id="@+id/main_btn_num_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|end"
+        android:layout_alignTop="@+id/main_btn_num_4"
+        android:layout_toEndOf="@+id/main_btn_num_5"
         android:text="@string/number_6" />
 
     <Button
         android:id="@+id/main_btn_num_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
+        android:layout_below="@+id/main_btn_num_4"
         android:text="@string/number_1" />
 
     <Button
         android:id="@+id/main_btn_num_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
+        android:layout_alignTop="@+id/main_btn_num_1"
+        android:layout_toEndOf="@+id/main_btn_num_1"
         android:text="@string/number_2" />
 
     <Button
         android:id="@+id/main_btn_num_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_alignTop="@+id/main_btn_num_1"
+        android:layout_toEndOf="@+id/main_btn_num_2"
         android:text="@string/number_3" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/main_btn_num_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_btn_num_1"
+        android:text="@string/number_0" />
+
+    <Button
+        android:id="@+id/main_btn_num_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/main_btn_num_0"
+        android:layout_toEndOf="@id/main_btn_num_0"
+        android:text="@string/number_dot" />
+
+    <Button
+        android:id="@+id/main_btn_equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/main_btn_num_0"
+        android:layout_toEndOf="@id/main_btn_num_dot"
+        android:text="@string/operator_equal" />
+
+    <!--Operation-->
+    <Button
+        android:id="@+id/main_btn_op_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/main_et_result"
+        android:layout_toEndOf="@+id/main_btn_num_9"
+        android:text="@string/operator_delete" />
+
+    <Button
+        android:id="@+id/main_btn_op_division"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/main_btn_op_delete"
+        android:layout_alignStart="@+id/main_btn_op_delete"
+        android:layout_below="@+id/main_btn_op_delete"
+        android:text="@string/operator_division" />
+
+    <Button
+        android:id="@+id/main_btn_op_multiplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/main_btn_op_delete"
+        android:layout_alignStart="@+id/main_btn_op_delete"
+        android:layout_below="@+id/main_btn_op_division"
+        android:text="@string/operator_multiplier" />
+
+    <Button
+        android:id="@+id/main_btn_op_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/main_btn_op_delete"
+        android:layout_alignStart="@+id/main_btn_op_delete"
+        android:layout_below="@+id/main_btn_op_multiplier"
+        android:text="@string/operator_subtract" />
+
+    <Button
+        android:id="@+id/main_btn_op_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/main_btn_op_delete"
+        android:layout_alignStart="@+id/main_btn_op_delete"
+        android:layout_below="@+id/main_btn_op_subtract"
+        android:text="@string/operator_add" />
+
+</RelativeLayout>
