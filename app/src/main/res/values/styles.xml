@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Widget.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Widget.Button.Numpad">
+        <item name="android:textColor">@color/color_num</item>
+    </style>
+
+    <style name="Widget.Button.Op">
+        <item name="android:textColor">@color/color_op</item>
+    </style>
 </resources>
